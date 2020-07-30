@@ -7,8 +7,6 @@ name: CI
 on:
   push:
     branches: [ master ]
-    paths:
-    - '**.md'
   pull_request:
     branches: [ master ]
 
