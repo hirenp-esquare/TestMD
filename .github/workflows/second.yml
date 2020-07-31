@@ -41,14 +41,26 @@ jobs:
         # Set paths which should be recursively scanned for markdown files (*.md) and linted. By default all "*.md" files are checked
         #search_paths: # optional
         # Verbose mode for markdown-link-check
-        #verbose: # optional 
+        #verbose: # optional
         
-    - name: Run the action # You would run your tests before this using the output to set state/desc
+    - name: github-status-action
       uses: Sibz/github-status-action@v1
-      with: 
+      with:
+        # Use secrets.GITHUB_TOKEN or your own token if you need to trigger other workflows the use "on: status"
         authToken: ${{ secrets.TEST_TOKEN }}
-        context: 'Test run'
-        description: 'Passed'
-        state: 'success'
-        sha: ${{github.event.pull_request.head.sha || github.sha}}
+        # The status of the check: success, error, failure or pending
+        state: 'success' 
+        # The context, this is displayed as the name of the check
+        context: 'Test run' # optional, default is default
+        # Short text explaining the status of the check
+        description: 'Passed' # optional, default is 
+        # Repostory onwer, defaults to context github.repository_owner if omited
+        #owner: # optional, default is ${{ github.repository_owner }}
+        # Repository, default to context github.repository if omited
+        #repository: # optional, default is ${{ github.repository }}
+        # SHA of commit to update status on, defaults to context github.sha
+        sha: ${{github.event.pull_request.head.sha || github.sha}} # optional, default is ${{ github.sha }}
+        # URL/URI to use for further details.
+        #target_url: # optional 
+    
    
