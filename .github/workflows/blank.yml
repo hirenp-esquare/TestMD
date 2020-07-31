@@ -42,9 +42,10 @@ jobs:
       with:
         # GITHUB_TOKEN or a `repo` scoped Personal Access Token (PAT)
         token: ${{ secrets.TEST_TOKEN }} # optional, default is ${{ github.token }}
+        
         # Relative path under $GITHUB_WORKSPACE to the repository. Defaults to $GITHUB_WORKSPACE.
-
         #path: # optional
+          
         # The message to use when committing changes.
         #commit-message: # optional, default is [create-pull-request] automated change
         # The committer name and email address in the format `Display Name <email@address.com>`. Defaults to the GitHub Actions bot user.
@@ -54,7 +55,7 @@ jobs:
 
         #author: # optional, default is ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
         # The pull request branch name.
-        branch: 'PROD' # optional, default is create-pull-request/patch
+        #branch: 'PROD' # optional, default is create-pull-request/patch
         # The branch suffix type when using the alternative branching strategy.
         #branch-suffix: # optional
         # The pull request base branch. Defaults to the branch checked out in the workflow.
