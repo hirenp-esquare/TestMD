@@ -36,51 +36,35 @@ jobs:
         # The branch to create
         branch: 'UAT' # optional, default is release-candidate
         
-        
-    - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v3.0.0
+    - name: GitHub Pull Request Action
+      uses: repo-sync/pull-request@v2.3
       with:
-        # GITHUB_TOKEN or a `repo` scoped Personal Access Token (PAT)
-        token: ${{ secrets.TEST_TOKEN }} # optional, default is ${{ github.token }}
+        # Branch name to pull from, default is triggered branch
+        #source_branch: # optional
+        # Branch name to sync to in this repo, default is master
+        destination_branch: 'PROD' # optional, default is master
+        # Pull request title
+        #pr_title: # optional
+        # Pull request body
+        #pr_body: # optional
+        # Pull request template
+        #pr_template: # optional
+        # Pull request reviewers, comma-separated list (no spaces)
+        #pr_reviewer: # optional
+        # Pull request assignees, comma-separated list (no spaces)
+        #pr_assignee: # optional
+        # Pull request labels, comma-separated list (no spaces)
+        #pr_label: # optional
+        # Pull request milestone
+        #pr_milestone: # optional
+        # Draft pull request
+        #pr_draft: # optional
+        # Create PR even if no changes
+        #pr_allow_empty: # optional
+        # GitHub token secret
+        github_token: ${{ secrets.TEST_TOKEN }}      
         
-        # Relative path under $GITHUB_WORKSPACE to the repository. Defaults to $GITHUB_WORKSPACE.
-        #path: # optional
-          
-        # The message to use when committing changes.
-        #commit-message: # optional, default is [create-pull-request] automated change
-        # The committer name and email address in the format `Display Name <email@address.com>`. Defaults to the GitHub Actions bot user.
-
-        #committer: # optional, default is GitHub <noreply@github.com>
-        # The author name and email address in the format `Display Name <email@address.com>`. Defaults to the user who triggered the workflow run.
-
-        #author: # optional, default is ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-        # The pull request branch name.
-        #branch: 'PROD' # optional, default is create-pull-request/patch
-        # The branch suffix type when using the alternative branching strategy.
-        #branch-suffix: # optional
-        # The pull request base branch. Defaults to the branch checked out in the workflow.
-
-        #base: # optional
-        # A fork of the checked out parent repository to which the pull request branch will be pushed. e.g. `owner/repo-fork`. The pull request will be created to merge the fork's branch into the parent's base.
-
-        #push-to-fork: # optional
-        # The title of the pull request.
-        #title: # optional, default is Changes by create-pull-request action
-        # The body of the pull request.
-        #body: # optional, default is Automated changes by [create-pull-request](https://github.com/peter-evans/create-pull-request) GitHub action
-        # A comma or newline separated list of labels.
-        #labels: # optional
-        # A comma or newline separated list of assignees (GitHub usernames).
-        #assignees: # optional
-        # A comma or newline separated list of reviewers (GitHub usernames) to request a review from.
-        #reviewers: # optional
-        # A comma or newline separated list of GitHub teams to request a review from. Note that a `repo` scoped Personal Access Token (PAT) may be required.
-
-        #team-reviewers: # optional
-        # The number of the milestone to associate the pull request with.
-        #milestone: # optional
-        # Create a draft pull request
-        #draft: # optional      
+     
    
 
     # Runs a set of commands using the runners shell
