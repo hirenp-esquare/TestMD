@@ -10,7 +10,7 @@ on:
     #paths:
     #- '**.md'
   pull_request:
-    branches: [ master ]
+    branches: [ Demo ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
