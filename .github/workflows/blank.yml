@@ -34,7 +34,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.TEST_TOKEN }}
       with:
         # The branch to create
-        branch: 'Hello' # optional, default is release-candidate
+        branch: 'UAT' # optional, default is release-candidate
 
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
