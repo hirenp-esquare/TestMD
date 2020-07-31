@@ -34,7 +34,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.TEST_TOKEN }}
       with:
         # The branch to create
-        branch: 'UAT' # optional, default is release-candidate
+        branch: 'Feature' # optional, default is release-candidate
         
     - name: GitHub Pull Request Action
       uses: repo-sync/pull-request@v2.3
@@ -42,7 +42,7 @@ jobs:
         # Branch name to pull from, default is triggered branch
         #source_branch: # optional
         # Branch name to sync to in this repo, default is master
-        destination_branch: 'dummy' # optional, default is master
+        destination_branch: 'QA' # optional, default is master
         # Pull request title
         #pr_title: # optional
         # Pull request body
@@ -50,7 +50,7 @@ jobs:
         # Pull request template
         #pr_template: # optional
         # Pull request reviewers, comma-separated list (no spaces)
-        #pr_reviewer: # optional
+        pr_reviewer: 'hirenpatel35' # optional
         # Pull request assignees, comma-separated list (no spaces)
         #pr_assignee: # optional
         # Pull request labels, comma-separated list (no spaces)
