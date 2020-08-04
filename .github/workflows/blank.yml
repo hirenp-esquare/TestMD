@@ -24,6 +24,38 @@ jobs:
     
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    
+    
+    - name: Markdown Linting Action
+      uses: avto-dev/markdown-lint@v1.3.1
+      #with:
+        # Custom rule files (file|directory|glob|package)
+        #rules: # optional
+        # Configuration file (JSON, JSONC, or YAML)
+        #config: # optional
+        # Fix basic errors
+        #fix: # optional, default is false
+        # Write issues to file
+        #output: # optional
+        # Files to ignore/exclude
+        #ignore: # optional
+        # Files (directories|globs) for a work or any additional arguments
+        #args: 
+        
+    - name: simple-cspell
+      uses: zwaldowski/cspell-action@1.0.0
+      with:
+        # Glob pattern of files to check
+        paths: "**.md"
+        config: .github/workflows/cspell.json
+        # Configuration file to use. By default cspell looks for cspell.json in the current directory.
+        #config: # optional
+        # Exclude files matching the glob pattern
+        #exclude: # optional
+        # Only output the first instance of a word not found in the dictionaries.
+        #unique: # optional
+          
+          
     - name: Create Branch
       uses: peterjgrainger/action-create-branch@v2.0.0
       env:
@@ -31,19 +63,6 @@ jobs:
       with:
         # The branch to create
         branch: 'Feature' # optional, default is release-candidate
-        
-        
-    - name: simple-cspell
-      uses: zwaldowski/cspell-action@1.0.0
-      with:
-        # Glob pattern of files to check
-        paths: "**.md"
-        # Configuration file to use. By default cspell looks for cspell.json in the current directory.
-        #config: # optional
-        # Exclude files matching the glob pattern
-        #exclude: # optional
-        # Only output the first instance of a word not found in the dictionaries.
-        #unique: # optional
           
     - name: GitHub Pull Request Action
       uses: repo-sync/pull-request@v2.3
