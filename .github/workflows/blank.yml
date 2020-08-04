@@ -38,7 +38,7 @@ jobs:
       with:
         # Glob pattern of files to check
         paths: "**/*.{md,js}"
-        #config: .github/workflows/cspell.json
+        config: .github/workflows/cspell.json
         # Configuration file to use. By default cspell looks for cspell.json in the current directory.
         #config: # optional
         # Exclude files matching the glob pattern
