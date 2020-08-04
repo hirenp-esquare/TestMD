@@ -45,8 +45,8 @@ jobs:
         # URL/URI to use for further details.
         #target_url: # optional
     
-    - name: My Markdown Linter
-      uses: ruzickap/action-my-markdown-linter@v0.0.1
+    #- name: My Markdown Linter
+    #  uses: ruzickap/action-my-markdown-linter@v0.0.1
       #with:
         # markdownlint config file
         #config_file: # optional
@@ -59,8 +59,8 @@ jobs:
         # Set paths which should be recursively scanned for markdown files (*.md) and linted. By default all "*.md" files are checked
         #search_paths: # optional
     
-    - name: Markdown Linting Action
-      uses: avto-dev/markdown-lint@v1.3.1
+    #- name: Markdown Linting Action
+    #  uses: avto-dev/markdown-lint@v1.3.1
       #with:
         # Custom rule files (file|directory|glob|package)
         #rules: # optional
@@ -75,12 +75,12 @@ jobs:
         # Files (directories|globs) for a work or any additional arguments
         #args: 
         
-    - name: simple-cspell
-      uses: zwaldowski/cspell-action@1.0.0
-      with:
+   # - name: simple-cspell
+   #   uses: zwaldowski/cspell-action@1.0.0
+   #   with:
         # Glob pattern of files to check
-        paths: "**.md"
-        config: .github/workflows/cspell.json
+   #     paths: "**.md"
+   #     config: .github/workflows/cspell.json
         # Configuration file to use. By default cspell looks for cspell.json in the current directory.
         #config: # optional
         # Exclude files matching the glob pattern
