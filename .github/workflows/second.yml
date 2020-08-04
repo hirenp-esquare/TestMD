@@ -42,6 +42,18 @@ jobs:
         #search_paths: # optional
         # Verbose mode for markdown-link-check
         #verbose: # optional
+  
+    - name: simple-cspell
+      uses: zwaldowski/cspell-action@1.0.0
+      with:
+        # Glob pattern of files to check
+        paths: "**/*.{md}"
+        # Configuration file to use. By default cspell looks for cspell.json in the current directory.
+        #config: # optional
+        # Exclude files matching the glob pattern
+        #exclude: # optional
+        # Only output the first instance of a word not found in the dictionaries.
+        #unique: # optional
         
     - name: github-status-action
       uses: Sibz/github-status-action@v1
