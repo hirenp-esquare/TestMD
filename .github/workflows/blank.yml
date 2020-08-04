@@ -27,8 +27,8 @@ jobs:
     
     
     
-    #- name: My Markdown Linter
-    #  uses: ruzickap/action-my-markdown-linter@v0.0.1
+    - name: My Markdown Linter
+      uses: ruzickap/action-my-markdown-linter@v0.0.1
       #with:
         # markdownlint config file
         #config_file: # optional
