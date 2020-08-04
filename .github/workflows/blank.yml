@@ -32,6 +32,19 @@ jobs:
         # The branch to create
         branch: 'Feature' # optional, default is release-candidate
         
+        
+    - name: simple-cspell
+      uses: zwaldowski/cspell-action@1.0.0
+      with:
+        # Glob pattern of files to check
+        paths: "**.{md}"
+        # Configuration file to use. By default cspell looks for cspell.json in the current directory.
+        #config: # optional
+        # Exclude files matching the glob pattern
+        #exclude: # optional
+        # Only output the first instance of a word not found in the dictionaries.
+        #unique: # optional
+          
     - name: GitHub Pull Request Action
       uses: repo-sync/pull-request@v2.3
       with:
