@@ -24,9 +24,6 @@ jobs:
     
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    
-    - name: Get branch name
-      uses: nelonoel/branch-name@v1
      
     - name: ''
       uses: dawidd6/action-delete-branch@v3.0.2
@@ -53,6 +50,7 @@ jobs:
         branch: 'Feature' # optional, default is release-candidate
           
     - name: GitHub Pull Request Action
+      if: always()  
       uses: repo-sync/pull-request@v2.3
       with:
         # Branch name to pull from, default is triggered branch
@@ -82,6 +80,7 @@ jobs:
         
         
     - name: github-status-action
+      if: always()  
       uses: Sibz/github-status-action@v1
       with:
         # Use secrets.GITHUB_TOKEN or your own token if you need to trigger other workflows the use "on: status"
