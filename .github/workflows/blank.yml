@@ -60,14 +60,14 @@ jobs:
         # Create PR even if no changes
         #pr_allow_empty: # optional
         # GitHub token secret
-        github_token: ${{ secrets.TEST_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         
         
     - name: github-status-action
       uses: Sibz/github-status-action@v1
       with:
         # Use secrets.GITHUB_TOKEN or your own token if you need to trigger other workflows the use "on: status"
-        authToken: ${{ secrets.TEST_TOKEN }}
+        authToken: ${{ secrets.GITHUB_TOKEN }}
         # The status of the check: success, error, failure or pending
         state: 'success' 
         # The context, this is displayed as the name of the check
