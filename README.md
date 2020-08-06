@@ -16,22 +16,8 @@ tyr
 Thiz iz a schpelling chek.
 
 adddd  dlkdkljkljkl jkljkljlk lkjl 
-g
-g
-g
-g
-gg
+afternoon this is verified things and check this details
+lkjkjklj jkljkljlkj kjlkjkljlk kjkljklj  jkljkljklj jlkjlkjlkj lkjlkjlkjlk jlkjlkjkljkl jkljlkjlkj jlkjlkj 
+jlkjkljlkj ljl
 
-g
-g
-g
-g
-g
-g
-
-g
-g
-g
-g
-g
 
