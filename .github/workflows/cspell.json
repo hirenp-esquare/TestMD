@@ -19,6 +19,7 @@
     "flagWords": [
         "hte"
     ],
+    minWordLength:3,
     "dictionaries": ["customd"],
     "dictionaryDefinitions": [
     { "name": "customd", "path": "./cspellcdict.txt"}
