@@ -18,5 +18,9 @@
     // For example "hte" should be "the"
     "flagWords": [
         "hte"
-    ]
+    ],
+    "dictionaries": ["customd"],
+    "dictionaryDefinitions": [
+    { "name": "customd", "path": "./cspellcdict.txt"}
+    ],
 }
