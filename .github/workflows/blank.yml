@@ -37,7 +37,7 @@ jobs:
         # Exclude files matching the glob pattern
         #exclude: # optional
         # Only output the first instance of a word not found in the dictionaries.
-        #unique: # optional
+        unique: "true" # optional
     
     
     - name: ''
