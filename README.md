@@ -27,3 +27,5 @@ tyr
 sssaaaa
 
 aaaqq
+
+Thiz iz a schpelling chek.
