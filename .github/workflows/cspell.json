@@ -19,8 +19,8 @@
     "flagWords": [
         "hte"
     ],
-    "dictionaries": ["customdd"],
+    "dictionaries": ["customd"],
     "dictionaryDefinitions": [
-    { "name": "customd", "path": "./cspellcdict.txt"}
+    { "name": "customdd", "path": "./cspellcdict.txt"}
     ],
 }
