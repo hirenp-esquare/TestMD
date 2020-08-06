@@ -25,29 +25,21 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     
-    - name: Markdown Linting Action
-      uses: avto-dev/markdown-lint@v1.2.0
-      #with:
-        # Custom rule files (file|directory|glob|package)
-        #rules: # optional
-        # Configuration file (JSON, JSONC, or YAML)
-        #config: # optional
-        # Fix basic errors
-        #fix: # optional, default is false
-        # Write issues to file
-        #output: # optional
-        # Files to ignore/exclude
-        #ignore: # optional
-        # Files (directories|globs) for a work or any additional arguments
-        #args: 
-    
-    - name: Lint changelog file
-      uses: avto-dev/markdown-lint@v1
+    - name: Spell Checker
+      if: always()  
+      uses: zwaldowski/cspell-action@1.0.0
       with:
-        rules: '/lint/rules/changelog.js'
-        config: '/lint/config/changelog.yml'
-        args: './CHANGELOG.md'
-     
+        # Glob pattern of files to check
+        paths: "**.md"
+        config: .github/workflows/cspell.json
+        # Configuration file to use. By default cspell looks for cspell.json in the current directory.
+        #config: # optional
+        # Exclude files matching the glob pattern
+        #exclude: # optional
+        # Only output the first instance of a word not found in the dictionaries.
+        #unique: # optional
+    
+    
     - name: ''
       uses: dawidd6/action-delete-branch@v3.0.2
       with:
