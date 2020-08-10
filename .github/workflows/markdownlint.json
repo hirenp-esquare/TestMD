@@ -1,7 +1,9 @@
 {
   "default": true,
-  "MD003": { "style": "atx_closed" },
-  "MD007": { "indent": 4 },
+  "MD004": { "style": "consistent" },
+  "MD007": { "indent": 2 },
+  "MD009": { "br_spaces": 2 },
+  "MD011": { "code_blocks ": true },
   "no-hard-tabs": false,
   "whitespace": false
 }
