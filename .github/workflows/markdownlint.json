@@ -18,5 +18,5 @@
   "MD044": { "names": null },
   "no-hard-tabs": false,
   "whitespace": false,
-  "no-empty-links":true
+  "no-empty-links":false
 }
