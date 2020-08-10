@@ -23,3 +23,4 @@ jlkjkljlkj ljl
 sssss ss
 aa
 
+[an empty link]()
