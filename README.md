@@ -1,5 +1,7 @@
 ## ATX Closed style H2 ##
 
+[an empty link]()
+
 ![test](https://github.com/hirenp-waferwire/TestMD/workflows/test/badge.svg)
 
 [First Link](https://www.google.com)
@@ -23,5 +25,5 @@ jlkjkljlkj ljl
 sssss ss
 aa
 
-[an empty link]()
+
 hjhjhh
