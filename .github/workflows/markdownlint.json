@@ -17,5 +17,6 @@
   "MD036": { "punctuation": ".,;:!?。，；：！？" },
   "MD044": { "names": null },
   "no-hard-tabs": false,
-  "whitespace": false
+  "whitespace": false,
+  "no-empty-links":true
 }
