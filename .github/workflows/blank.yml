@@ -25,22 +25,12 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     - run: |
-          date > generated.txt
-          git config user.name hirenp-waferwire
-          git config user.email hirep@waferwire.com
-          git add .
-          git commit -m "generated"
-          git push
+          git diff-tree --no-commit-id --name-only -r dbcd4cd6dd5811f6afd28b7a80d2a2e5adcaf273
         
     
      # Runs a set of commands using the runners shell
     
-    - name: echo output
-      run: git diff-tree --no-commit-id --name-only -r bfce9fc59104143e7ced62fcf81f97cd4b9fb604
-      
-    - name: test
-      run: |
-        - echo ${{ github.sha }}
+   
       
       
        
