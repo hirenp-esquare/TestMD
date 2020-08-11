@@ -29,6 +29,7 @@ jobs:
     
     - name: echo output
       run: |
+      shell: bash
         echo git diff --name-only ${{ github.event.before }} ${{ github.sha }}
         echo ${{ secrets.GITHUB_TOKEN }}
         
