@@ -30,6 +30,10 @@ jobs:
     - name: echo output
       run: git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
       
+    - name: test
+      run: |
+        - echo ${{ github.sha }}
+      
       
        
         
