@@ -31,6 +31,9 @@ jobs:
       run: |
         echo "$Hello"
         echo '::set-env name=TEST::'$Hello
+      
+    - name: Get File Name
+      run: git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
    
     - name: Spell Checker
       if: always()  
