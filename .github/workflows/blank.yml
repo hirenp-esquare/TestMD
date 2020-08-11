@@ -28,7 +28,7 @@ jobs:
      # Runs a set of commands using the runners shell
     
     - name: echo output
-      run: git diff --name-only ${{ github.event.before }} ${{ github.sha }}
+      run: git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
       shell: bash
        
         
