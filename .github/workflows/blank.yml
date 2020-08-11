@@ -29,7 +29,7 @@ jobs:
     
     - name: echo output
       run: |
-        echo ${{ steps.getfile.outputs.files }}
+        echo git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
         echo ${{ secrets.GITHUB_TOKEN }}
         
     
