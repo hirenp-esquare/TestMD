@@ -24,7 +24,9 @@ jobs:
     
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    - run: git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
+    - name: just echo a message
+      run: |
+       echo git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.sha }}
    
     
     
