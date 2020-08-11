@@ -27,7 +27,7 @@ jobs:
       
     - name: Dump GitHub context
       env:
-       Hello: "**/*.md"
+       Hello: git diff-tree --no-commit-id --name-only -r ${{ github.sha }} #"**/*.md"
       run: |
         echo "$Hello"
         echo '::set-env name=TEST::'$Hello
