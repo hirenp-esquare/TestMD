@@ -34,7 +34,7 @@ jobs:
       
     - name: Get File Name
       #run: git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
-      run: git log -1 --oneline --name-status
+      run: git log -1 --name-status
    
     - name: Spell Checker
       if: always()  
