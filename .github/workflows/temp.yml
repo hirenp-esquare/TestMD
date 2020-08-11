@@ -30,4 +30,4 @@ jobs:
     - name: Run a multi-line script
       run: |
         echo Add other actions to build,
-        echo git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
+        echo git show --pretty="" --name-only ${{ github.sha }}
