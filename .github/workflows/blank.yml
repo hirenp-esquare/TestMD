@@ -30,7 +30,7 @@ jobs:
        Hello: "**/*.md"
       run: |
         echo "$Hello"
-        echo '::set-env name=TEST::env.Hello'
+        echo '::set-env name=TEST::'echo "$Hello"
    
     - name: Spell Checker
       if: always()  
