@@ -27,7 +27,7 @@ jobs:
       
     - name: Dump GitHub context
       env:
-       TEST: ${{ toJson(github) }}
+       TEST: git diff-tree --no-commit-id --name-only -r ${{ github.sha }} #${{ toJson(github) }}
       run: echo "$TEST"
    
         
