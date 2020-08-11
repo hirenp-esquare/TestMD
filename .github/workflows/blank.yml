@@ -26,16 +26,18 @@ jobs:
     - uses: actions/checkout@v2
       
     - name: Dump GitHub context
-      env:
-       TEST: "**/*.md"
-      run: echo "$TEST"
+      #env:
+       #TEST: "**/*.md"
+      #run: echo "$TEST"
+      
+      run: echo '::set-env name=SELECTED_COLOR::green'
    
     - name: Spell Checker
       if: always()  
       uses: zwaldowski/cspell-action@1.0.0
       with:
         # Glob pattern of files to check
-        paths: "${{ env.TEST }}"
+        paths: $SELECTED_COLOR
         config: .github/workflows/cspell.json
         # Configuration file to use. By default cspell looks for cspell.json in the current directory.
         #config: # optional
