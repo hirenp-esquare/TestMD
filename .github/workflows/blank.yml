@@ -24,7 +24,7 @@ jobs:
     
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    - run: sh -e diff-tree --no-commit-id --name-only -r ${{ github.sha }}
+    - run: sh diff-tree --no-commit-id --name-only -r ${{ github.sha }}
     - run: git-sh diff-tree --no-commit-id --name-only -r
     
     
