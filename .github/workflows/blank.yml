@@ -7,10 +7,10 @@ name: Test
 on:
   push:
     branches: [ master ]
-    paths:
-    - '**.md'
+    #paths:
+    #- '**.md'
   pull_request:
-    branches: [ master ]
+    #branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,8 +24,8 @@ jobs:
     
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    - run: sh diff-tree --no-commit-id --name-only -r ${{ github.sha }}
-    - run: git-sh diff-tree --no-commit-id --name-only -r
+    - run: git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
+   
     
     
       
