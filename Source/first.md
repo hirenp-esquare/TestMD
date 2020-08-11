@@ -21,14 +21,5 @@ s
 s
 sss
 
-GGGGGG
-d
-d
-dss
-djlkjkl
-ddjl;kjkljkl ddd
-d
-d
-d
-d
+
 jlkljjkljk
