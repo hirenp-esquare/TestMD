@@ -24,8 +24,7 @@ jobs:
     
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    - run: |
-          git diff-tree --no-commit-id --name-only -r dbcd4cd6dd5811f6afd28b7a80d2a2e5adcaf273
+    - run: git diff-tree --no-commit-id --name-only -r dbcd4cd6dd5811f6afd28b7a80d2a2e5adcaf273
         
     
      # Runs a set of commands using the runners shell
