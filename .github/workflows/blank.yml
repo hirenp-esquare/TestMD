@@ -25,12 +25,12 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
       
-    - name: Dump GitHub context
-      env:
-       Hello: git diff-tree --no-commit-id --name-only -r ${{ github.sha }} #"**/*.md"
-      run: |
-        echo "$Hello"
-        echo '::set-env name=TEST::'$Hello
+    #- name: Dump GitHub context
+    #  env:
+     #  Hello: git diff-tree --no-commit-id --name-only -r ${{ github.sha }} #"**/*.md"
+     # run: |
+      #  echo "$Hello"
+       # echo '::set-env name=TEST::'$Hello
       
     - name: Get File Name
       run: git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
