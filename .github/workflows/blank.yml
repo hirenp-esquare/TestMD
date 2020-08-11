@@ -37,7 +37,7 @@ jobs:
       uses: zwaldowski/cspell-action@1.0.0
       with:
         # Glob pattern of files to check
-        paths: $SELECTED_COLOR
+        paths: ${{ env.SELECTED_COLOR }}
         config: .github/workflows/cspell.json
         # Configuration file to use. By default cspell looks for cspell.json in the current directory.
         #config: # optional
