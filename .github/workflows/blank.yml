@@ -27,7 +27,7 @@ jobs:
     - name: Dump GitHub context
       env:
        TEST: ${{ toJson(github) }}
-       run: echo "TEST"
+       run: echo "$TEST"
    
         
     
