@@ -28,9 +28,9 @@ jobs:
     - name: Dump GitHub context
       env:
        Hello: "**/*.md"
-      #run: echo "$TEST"
-      
-      run: echo '::set-env name=TEST::$Hello'
+      run: |
+        echo "$Hello"
+        echo '::set-env name=TEST::$Hello'
    
     - name: Spell Checker
       if: always()  
