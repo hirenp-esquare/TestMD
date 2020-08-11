@@ -28,8 +28,10 @@ jobs:
      # Runs a set of commands using the runners shell
     
     - name: echo output
-      run: git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
       shell: bash
+      run: git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
+      
+      
        
         
     
