@@ -27,7 +27,7 @@ jobs:
       
     - name: Dump GitHub context
       env:
-       TEST: "README.md"
+       TEST: "**/*.md"
       run: echo "$TEST"
    
     - name: Spell Checker
