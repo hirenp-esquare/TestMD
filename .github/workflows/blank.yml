@@ -33,7 +33,7 @@ jobs:
        # echo '::set-env name=TEST::'$Hello
       
     - name: Get File Name
-      run: git --no-commit-id --name-only -r ${{ github.sha }}
+      run: git ls-tree --name-only -r ${{ github.sha }}
       #run: git log -1 --name-status
    
     - name: Spell Checker
