@@ -6,10 +6,10 @@ name: Test
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
-      #- "Feature*" 
-    #paths:
-    #- '**.md'
+    branches: #[ master ]
+      - "Feature*" 
+    paths:
+    - '**.md'
   pull_request:
     #branches: [ master ]
 
