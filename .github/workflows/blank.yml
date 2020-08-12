@@ -28,19 +28,12 @@ jobs:
       
     - name: Dump GitHub context
       env:
-       GetFileC: git diff-tree --no-commit-id --name-only -r ${{ github.sha }} #"**/*.md"
-       run: |
+        GetFileC: git diff-tree --no-commit-id --name-only -r ${{ github.sha }} #"**/*.md"
+      run: |
         echo "$GetFileC"
         echo '::set-env name=GetFileE::'$GetFileC
       
-    - name: Get File Name
-      run: | 
-       echo c1
-       git ls-tree --name-only -r ${{ github.sha }}
-       echo c2
-       git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
-      #run: git log -1 --name-status
-   
+      
     - name: Spell Checker
       if: always()  
       uses: zwaldowski/cspell-action@1.0.0
