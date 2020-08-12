@@ -26,12 +26,12 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
       
-    #- name: Dump GitHub context
-    #  env:
-     #  Hello: git diff-tree --no-commit-id --name-only -r ${{ github.sha }} #"**/*.md"
-     # run: |
-      #  echo "$Hello"
-       # echo '::set-env name=TEST::'$Hello
+    - name: Dump GitHub context
+      env:
+       GetFileC: git diff-tree --no-commit-id --name-only -r ${{ github.sha }} #"**/*.md"
+       run: |
+        echo "$GetFileC"
+        echo '::set-env name=GetFileE::'$GetFileC
       
     - name: Get File Name
       run: | 
@@ -46,8 +46,8 @@ jobs:
       uses: zwaldowski/cspell-action@1.0.0
       with:
         # Glob pattern of files to check
-        #paths: ${{ env.TEST }}
-        paths: "./Project/test.md"
+        paths: ${{ env.GetFileE }}
+        #paths: "./Project/test.md"
         config: .github/workflows/cspell.json
         # Configuration file to use. By default cspell looks for cspell.json in the current directory.
         #config: # optional
