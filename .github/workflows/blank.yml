@@ -34,6 +34,7 @@ jobs:
       run: |
         echo "$GetFileC"
         echo '::set-env name=GetFileE::'$GetFileC
+        git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
       
       
     - name: Spell Checker
