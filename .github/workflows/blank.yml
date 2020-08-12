@@ -29,11 +29,8 @@ jobs:
        fetch-depth: "0"
       
     - name: Dump GitHub context
-      env:
-        GetFileC: git diff-tree --no-commit-id --name-only -r ${{ github.sha }} #"**/*.md"
       run: |
-        echo "$GetFileC"
-        echo '::set-env name=GetFileE::'$GetFileC
+        echo '::set-env name=GetFileE::'$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | xargs)"
         git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
       
       
