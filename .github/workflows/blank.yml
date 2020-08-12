@@ -30,7 +30,7 @@ jobs:
       
     - name: Dump GitHub context
       run: |
-        echo '::set-env name=GetFileE::'$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | xargs)"
+        echo '::set-env name=GetFileE::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | xargs)'
         git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
       
       
