@@ -6,8 +6,8 @@ name: Test
 # events but only for the master branch
 on:
   push:
-    branches: #[ master ]
-      - "Feature*" 
+    branches: [ master ]
+      #- "Feature*" 
     paths:
     - '**.md'
   pull_request:
@@ -49,7 +49,7 @@ jobs:
     - name: Markdown Link Checker
       if: always()  
       uses: ruzickap/action-my-markdown-link-checker@v1.0.0
-      #with:
+      with:
         # markdown-link-check config file
         #config_file: # optional
         # Debug mode
@@ -61,7 +61,7 @@ jobs:
         # Quiet mode for markdown-link-check
         #quiet: # optional
         # Set paths which should be recursively scanned for markdown files (*.md) and linted. By default all "*.md" files are checked
-        #search_paths: # optional
+        search_paths: ${{ steps.getfile.outputs.files }} # optional
         # Verbose mode for markdown-link-check
         #verbose: # optional
       
