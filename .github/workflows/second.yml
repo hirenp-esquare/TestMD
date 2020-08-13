@@ -10,7 +10,6 @@ on:
     #paths:
     #- '**.md'
   pull_request:
-    types: [assigned, opened, synchronize, reopened]
     #types: [closed]
     branches: [QA]
     
