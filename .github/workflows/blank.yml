@@ -64,7 +64,7 @@ jobs:
       uses: repo-sync/pull-request@v2.3
       with:
         # Branch name to pull from, default is triggered branch
-        source_branch: 'master' # optional
+        #source_branch: '' # optional
         # Branch name to sync to in this repo, default is master
         destination_branch: 'QA' # optional, default is master
         # Pull request title
@@ -74,7 +74,7 @@ jobs:
         # Pull request template
         #pr_template: # optional
         # Pull request reviewers, comma-separated list (no spaces)
-        pr_reviewer: 'hirenp-waferwire,jamesmrollins' # optional
+        #pr_reviewer: 'hirenp-waferwire,jamesmrollins' # optional
         # Pull request assignees, comma-separated list (no spaces)
         #pr_assignee: # optional
         # Pull request labels, comma-separated list (no spaces)
