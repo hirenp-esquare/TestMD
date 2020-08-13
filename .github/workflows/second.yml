@@ -30,9 +30,7 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
       
-    - name: Comment on PR
-      uses: tiwanari/list-merged-pull-requests@master
-      with:
-        token: ${{ github.token }}
+    - name: Merge pull requests
+      uses: pascalgn/automerge-action@v0.9.0
     
    
