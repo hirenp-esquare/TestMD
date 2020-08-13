@@ -61,7 +61,7 @@ jobs:
         # Quiet mode for markdown-link-check
         #quiet: # optional
         # Set paths which should be recursively scanned for markdown files (*.md) and linted. By default all "*.md" files are checked
-        search_paths: 'Project' # optional
+        search_paths: ' Project/Data' # optional
         # Verbose mode for markdown-link-check
         #verbose: # optional
       
