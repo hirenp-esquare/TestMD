@@ -44,20 +44,7 @@ jobs:
         #git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
         
       
-    - name: Spell Checker
-      if: always()  
-      uses: zwaldowski/cspell-action@1.0.0
-      with:
-        # Glob pattern of files to check
-        paths: ${{ steps.getfile.outputs.files }}
-        #paths: "./Project/test.md"
-        config: .github/workflows/cspell.json
-        # Configuration file to use. By default cspell looks for cspell.json in the current directory.
-        #config: # optional
-        # Exclude files matching the glob pattern
-        #exclude: # optional
-        # Only output the first instance of a word not found in the dictionaries.
-        unique: "true" # optional
+    
     
     - name: GitHub Pull Request Action
       if: always()  
