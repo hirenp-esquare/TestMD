@@ -61,7 +61,7 @@ jobs:
         # Quiet mode for markdown-link-check
         #quiet: # optional
         # Set paths which should be recursively scanned for markdown files (*.md) and linted. By default all "*.md" files are checked
-        search_paths: ${{ steps.getfile.outputs.files }} # optional
+        search_paths: ./ # optional
         # Verbose mode for markdown-link-check
         #verbose: # optional
       
