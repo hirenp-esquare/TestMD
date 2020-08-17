@@ -10,11 +10,10 @@ on:
     #paths:
     #- '**.md'
   pull_request:
-    #types: [closed]
     branches: [QA]
-    
-    
-   
+    types: [closed]
+    paths:
+    - '**.md'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,8 +27,35 @@ jobs:
     
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-      
-    - name: Merge pull requests
-      uses: pascalgn/automerge-action@v0.9.0
     
+    - name: GitHub Pull Request Action
+      if: always()  
+      uses: repo-sync/pull-request@v2.3
+      with:
+        # Branch name to pull from, default is triggered branch
+        #source_branch: 'Feature' # optional
+        # Branch name to sync to in this repo, default is master
+        destination_branch: 'master' # optional, default is master
+        # Pull request title
+        #pr_title: # optional
+        # Pull request body
+        #pr_body: # optional
+        # Pull request template
+        #pr_template: # optional
+        # Pull request reviewers, comma-separated list (no spaces)
+        pr_reviewer: 'hirenpatel35' # optional
+        # Pull request assignees, comma-separated list (no spaces)
+        #pr_assignee: # optional
+        # Pull request labels, comma-separated list (no spaces)
+        #pr_label: # optional
+        # Pull request milestone
+        #pr_milestone: # optional
+        # Draft pull request
+        #pr_draft: # optional
+        # Create PR even if no changes
+        #pr_allow_empty: # optional
+        # GitHub token secret
+        github_token: ${{ secrets.GITHUB_TOKEN }} 
+        
+       
    
